@@ -36,7 +36,24 @@ function addR() {
 
 //Add a column
 function addC() {
-    alert("Clicked Add Col")
+    // Gets table element from the DOM
+    let currGrid = document.getElementById("grid");
+    let addColumn = document.querySelectorAll("tr");
+    let currNumOfRows = 0;
+    if (numRows === 0){
+        addR();
+        currNumOfRows++;
+    }
+
+    for (let i = 0; i < numRows; i++){
+        let box =  document.createElement("td");
+        box.onclick = function(){
+            this.style.backgroundColor = document.getElementById("selectedID").value;
+        };
+        addColumn[currNumOfRows].appendChild(box);
+        currNumOfRows++;
+    }
+    numCols++;
 }
 
 //Remove a row
