@@ -1,9 +1,9 @@
 tr,td{
-    border:1px;
+    border:2px;
     border-style: solid;
 }
 td{
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
     background-color: white;
 }
