@@ -12,3 +12,7 @@ Joy Biswas - joybiswas1
 <p>
 The goal of this assignment is to further demonstrate an understanding of git/GitHub, HTML, CSS, JS, DOM manipulation, and handling user events.
 </p>
+
+<p>
+Create a dynamic grid of boxes and color them in with beach colors.
+</p>
