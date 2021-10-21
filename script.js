@@ -4,8 +4,36 @@ let colorSelected;
 
 //Add a row
 function addR() {
-    alert("Clicked Add Row")
+    // Gets table element from the DOM
+    let currGrid = document.getElementById("grid");
+    let addRow = document.createElement("tr");
+    if (numRows === 0 && numCols === 0)
+    {
+        let box = document.createElement("td");
+        box.onclick = function()
+        {
+            this.style.backgroundColor = document.getElementById("selectedID").value;
+        };
+        addRow.appendChild(box);
+        numCols++;
+    }
+    else
+    {
+        for (let i = 0; i < numCols; i++)
+        {
+            let box = document.createElement("td");
+            box.onclick = function()
+            {
+                this.style.backgroundColor = document.getElementById("selectedID").value;
+            };
+            addRow.appendChild(box);
+        }
+    }
+
+    currGrid.appendChild(addRow);
+    numRows++;
 }
+
 //Add a column
 function addC() {
     alert("Clicked Add Col")
