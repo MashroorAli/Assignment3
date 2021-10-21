@@ -58,8 +58,19 @@ function addC() {
 
 //Remove a row
 function removeR() {
-    alert("Clicked Remove Row")
+    
+    // Gets table element from the DOM
+    let currGrid = document.getElementById("grid");
+    currGrid.deleteRow(numRows-1);
+    numRows--;
+    if (numRows < 1)
+    {
+        numCols = 0;
+        numRows = 0;
+    }
 }
+
+
 //Remove a column
 function removeC() {
     alert("Clicked Remove Col")
