@@ -62,7 +62,15 @@ function removeR() {
 }
 //Remove a column
 function removeC() {
-    alert("Clicked Remove Col")
+    let currNumOfRowsInGrid = document.querySelectorAll("tr");
+    let currNumOfRows = 0;
+    for (let i = 0; i < numRows; i++)
+    {
+        currNumOfRowsInGrid[currNumOfRows].removeChild(currNumOfRowsInGrid[currNumOfRows].lastChild);
+        // amount of rows deleted
+        currNumOfRows++;
+    }
+    numCols--;
 }
 //sets global var for selected color
 function selected(){
