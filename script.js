@@ -90,7 +90,7 @@ function selected(){
 }
 
 function fill(){
-    alert("Clicked Fill All")
+    document.querySelectorAll('td').forEach(td => td.style.backgroundColor = document.getElementById("selectedID").value);
 }
 
 function clearAll(){
