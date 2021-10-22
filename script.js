@@ -73,15 +73,7 @@ function removeR() {
 
 //Remove a column
 function removeC() {
-    let currNumOfRowsInGrid = document.querySelectorAll("tr");
-    let currNumOfRows = 0;
-    for (let i = 0; i < numRows; i++)
-    {
-        currNumOfRowsInGrid[currNumOfRows].removeChild(currNumOfRowsInGrid[currNumOfRows].lastChild);
-        // amount of rows deleted
-        currNumOfRows++;
-    }
-    numCols--;
+    alert("Clicked Remove Col")
 }
 //sets global var for selected color
 function selected(){
@@ -90,13 +82,20 @@ function selected(){
 }
 
 function fill(){
-    document.querySelectorAll('td').forEach(td => td.style.backgroundColor = document.getElementById("selectedID").value);
+    alert("Clicked Fill All")
 }
 
 function clearAll(){
-    document.querySelectorAll('td').forEach(td => td.style.backgroundColor = "white");
+    alert("Clicked Clear All")
 }
 
 function fillU(){
-    alert("Clicked Fill All Uncolored")
+    // Gets grid from the DOM 
+    document.querySelectorAll("td").forEach(td => {
+        if (td.style.backgroundColor === "" || td.style.backgroundColor === "white")
+        {
+            // Gets currently selected color and sets all unfilled boxes to said color
+            td.style.backgroundColor = document.getElementById("selectedID").value;
+        }
+    });
 }
